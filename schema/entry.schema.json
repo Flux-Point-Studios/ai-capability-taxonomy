@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Flux-Point-Studios/ai-capability-taxonomy/schema/entry.schema.json",
+  "title": "AI Capability Taxonomy Entry",
+  "description": "Schema for a single capability classification entry. Each taxonomy/*.md file MUST have YAML frontmatter conforming to this schema.",
+  "type": "object",
+  "required": ["id", "name", "severity", "status", "introduced"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Z]+-[A-Z]+-\\d{3}$",
+      "description": "Stable identifier. Format: CLASS-SUBCLASS-NNN. Once published, MUST NOT change."
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120,
+      "description": "Short descriptive name of the capability classification."
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["informational", "low", "medium", "high", "critical"],
+      "description": "Relative severity of an observation against this classification. Descriptive, not prescriptive."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "stable", "deprecated"],
+      "description": "Lifecycle state of the entry."
+    },
+    "introduced": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "description": "ISO 8601 date the entry was first published."
+    },
+    "deprecated": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "description": "ISO 8601 date the entry was marked deprecated. Required when status=deprecated."
+    },
+    "supersededBy": {
+      "type": "string",
+      "pattern": "^[A-Z]+-[A-Z]+-\\d{3}$",
+      "description": "ID of the entry that replaces this one. Used together with status=deprecated."
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "status": { "const": "deprecated" } }, "required": ["status"] },
+      "then": { "required": ["deprecated"] }
+    }
+  ]
+}

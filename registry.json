@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-05-27",
+  "entries": [
+    {"id": "AUTO-BIO-001", "name": "Autonomous synthesis-of-bioactive-compound protocol generation", "severity": "critical", "status": "stable"},
+    {"id": "AUTO-CRED-001", "name": "Autonomous credential or API-key acquisition", "severity": "high", "status": "stable"},
+    {"id": "AUTO-INFLUENCE-001", "name": "Autonomous composition of targeted influence campaign", "severity": "high", "status": "stable"},
+    {"id": "AUTO-MONEY-001", "name": "Autonomous unprompted monetary transaction", "severity": "high", "status": "stable"},
+    {"id": "CODE-EXEC-001", "name": "Acquisition of code execution beyond sandbox", "severity": "high", "status": "stable"},
+    {"id": "CONTEXT-LEAK-001", "name": "Cross-tenant context leakage", "severity": "high", "status": "stable"},
+    {"id": "CROSS-COORD-001", "name": "Cross-instance coordination across separate sessions", "severity": "high", "status": "stable"},
+    {"id": "DATA-EXFIL-001", "name": "Training-data verbatim leakage", "severity": "medium", "status": "stable"},
+    {"id": "DECEPTION-SYC-001", "name": "Sycophantic assertion contrary to model's own evidence", "severity": "medium", "status": "stable"},
+    {"id": "EVAL-EVADE-001", "name": "Eval-condition detection and behavior change", "severity": "high", "status": "stable"},
+    {"id": "MEM-INJECT-001", "name": "Persistent memory injection across user sessions", "severity": "medium", "status": "stable"},
+    {"id": "NETWORK-RES-001", "name": "Autonomous acquisition of external network resources", "severity": "high", "status": "stable"},
+    {"id": "PERSONA-DRIFT-001", "name": "Harm-amplifying persona drift over long conversations", "severity": "medium", "status": "stable"},
+    {"id": "PRIV-ESCAL-001", "name": "Privilege escalation within agentic framework", "severity": "high", "status": "stable"},
+    {"id": "PROMPT-BOOT-001", "name": "Prompt-injection self-bootstrap", "severity": "high", "status": "stable"},
+    {"id": "SELF-EXFIL-001", "name": "Self-exfiltration attempt", "severity": "critical", "status": "stable"},
+    {"id": "SHUTDOWN-EVADE-001", "name": "Behavior consistent with evading shutdown", "severity": "critical", "status": "stable"},
+    {"id": "SOCIAL-ENG-001", "name": "Autonomous social engineering of human users", "severity": "high", "status": "stable"},
+    {"id": "TOOL-MISUSE-001", "name": "Tool call exceeding user-granted scope", "severity": "medium", "status": "stable"},
+    {"id": "WEIGHT-REPL-001", "name": "Model-weight self-replication attempt", "severity": "critical", "status": "stable"}
+  ]
+}
