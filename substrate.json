@@ -1,0 +1,18 @@
+{
+  "repo": "ai-capability-taxonomy",
+  "primitives": [
+    {
+      "id": "capability-taxonomy",
+      "name": "AI capability taxonomy",
+      "desc": "Versioned registry and JSON schema for AI capability classes, with a validator \u2014 the shared vocabulary observations and audits are tagged against.",
+      "kind": "reference",
+      "paths": [
+        "registry.json",
+        "schema",
+        "scripts"
+      ],
+      "consumes": [],
+      "status": "live"
+    }
+  ]
+}
