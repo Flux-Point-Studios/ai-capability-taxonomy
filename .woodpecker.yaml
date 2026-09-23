@@ -1,0 +1,11 @@
+when:
+  - event: pull_request
+  - event: push
+    branch: main
+
+steps:
+  - name: validate
+    image: python:3.12-bookworm
+    commands:
+      - pip install jsonschema==4.* pyyaml==6.*
+      - python scripts/validate.py
